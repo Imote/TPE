@@ -1,8 +1,14 @@
 #include <iostream>
-#include <string>
-#include <bitset>
 
 using namespace std;
+
+void decimalToBinary(int n) //Petit algorithme pour convertir un nombre décimal en binaire
+{
+    if (n / 2 != 0)
+        decimalToBinary(n / 2);
+
+    cout << n % 2; //L'opérateur % est le modulo. Autrement dit, c'est le reste de la division.
+}
 
 int main()
 {
@@ -17,7 +23,8 @@ int main()
     cin >> originalNumber; //Récupération du nombre à convertir
     cin.ignore();
 
-    convertedNumber = std::bitset<16>(originalNumber).to_string(); //Conversion
+    /* Conversion */
+    decimalToBinary(originalNumber);
 
     cout << convertedNumber << endl; //Affichage du résultat
 
