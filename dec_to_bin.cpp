@@ -1,6 +1,6 @@
-#include <iostream>
+#include <iostream> //Inclut les fonctionnalités de la console
 
-using namespace std;
+using namespace std; //Permet d'inclure toutes les fonctionnalités inclus dans le paquet standard (std) du C++
 
 void decimalToBinary(int n) //Petit algorithme pour convertir un nombre décimal en binaire
 {
@@ -13,23 +13,23 @@ void decimalToBinary(int n) //Petit algorithme pour convertir un nombre décimal
 int main()
 {
     int originalNumber; //Création d'une variable pour contenir le nombre décimal
-    std::string convertedNumber; //Création d'une variable pour contenir le nombre binaire
-
+    
+    /* cout permet d'afficher du texte selon la syntaxe suivante */
+    /* endl permet de revenir à la ligne */
     cout << "Bienvenue dans ce logiciel de conversion." << endl
          << "Nous allons vous demander d'entrer un nombre (entier) puis nous le convertirons "
          << "en binaire pour ensuite vous l'afficher." << endl
          << "Votre nombre : ";
 
-    cin >> originalNumber; //Récupération du nombre à convertir
-    cin.ignore();
+    cin >> originalNumber; //Récupération du nombre à convertir dans 
+    cin.ignore(); //Permet d'indiquer la fin de la saisie une fois la touche entrée pressé
 
     /* Conversion */
-    decimalToBinary(originalNumber);
+    decimalToBinary(originalNumber); //Appel de l'algorithme d'affichage
 
-    cout << convertedNumber << endl; //Affichage du résultat
-
-    cin.ignore();
-
+    cin.ignore(); //Permet dans le contexte actuel d'attendre la pression de la touche entrée pour fermer le programme
+    //Sinon le programme se ferme directement après l'affichage du résultat
+    
     return 0;
 }
 
