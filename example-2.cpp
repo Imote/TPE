@@ -56,6 +56,12 @@ int main()
     statement.place.region = "Somme";
     statement.place.city = "Abbeville";
     statement.place.sensorId = 9546;
-    
+
+    if(statement.isCold())
+        cout << "Il a fait froid." << endl;
+    else if(statement.isHot())
+        cout << "Il a fait chaud." << endl;
+    else
+        cout << "Il a fait ni chaud ni froid" << endl;
 }
 
