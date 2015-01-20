@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -21,23 +22,27 @@ class WeatherInformations
 public:
     enum SkyState{ SUN, CLOUD, RAIN };
 
-    bool isCold();
-    bool isHot();
+    bool isCold(){ if(temperature <= 5) return true; else return false;}
+    bool isHot(){ if(temperature >= 15) return true; else return false;}
 
-    int getSensorId();
-    int getID();
+    int getSensorId(){ return place.sensorId; }
+    int getID(){ return id; }
 
-    int Id;
+    int id;
     float temperature; //La température
     int timestamp; //Moment du relevé
     float pressure; //La pression
-    SkyState skyState;
-    Wind winds;
-    Place place;
+    SkyState skyState; //état du ciel
+    Wind winds; //Vent
+    Place place; //Lieux
 };
 
 int main()
 {
-
+    WeatherInformations statement;
+    
+    //Mise en place de donnée de base
+    
+    
 }
 
