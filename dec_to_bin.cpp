@@ -1,3 +1,5 @@
+/* Ce programme permet de convertir un nombre décimal en binaire via un algorithme très simple. */
+
 #include <iostream> //Inclut les fonctionnalités de la console
 
 using namespace std; //Permet d'inclure toutes les fonctionnalités inclus dans le paquet standard (std) du C++
